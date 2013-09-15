@@ -14,7 +14,7 @@ class AreaController extends CmsController
 		if($modle->save()){
 			echo '新增地址成功';
 		}else{
-			echo '增加失败';
+			echo '增加失败!';
 		}
 	}
 

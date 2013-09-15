@@ -1,0 +1,15 @@
+[1mdiff --git a/application/modules/user/controllers/AreaController.php b/application/modules/user/controllers/AreaController.php[m
+[1mindex 42ddfc9..c1f3363 100644[m
+[1m--- a/application/modules/user/controllers/AreaController.php[m
+[1m+++ b/application/modules/user/controllers/AreaController.php[m
+[36m@@ -14,7 +14,7 @@[m [mclass AreaController extends CmsController[m
+ 		if($modle->save()){[m
+ 			echo '新增地址成功';[m
+ 		}else{[m
+[31m-			echo '增加失败';[m
+[32m+[m			[32mecho '增加失败!';[m
+ 		}[m
+ 	}[m
+ [m
+warning: LF will be replaced by CRLF in application/modules/user/controllers/AreaController.php.
+The file will have its original line endings in your working directory.
