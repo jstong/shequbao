@@ -121,7 +121,28 @@ class ServiceController extends CmsController{
 		}else{
 			$this->request(404,'用户不存在');
 		}
-	
-	
 	}  
+	
+	public function actionCreateTrends($id){
+		if(Yii::app()->getUser->getId()===$id){
+			$model = new UserTrends();
+			$newAttributes = $this->getPost();
+			$newAttributes['publish_time'] = time();
+			$model->attributes = $newAttributes;
+			if($model->save()){
+				$this->response(200,'增加动态成功');
+			}else{
+				$this->response(400,'增加失败');
+			}
+		}else{
+			$this->response(400,'添加动态失败');
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 }
